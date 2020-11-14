@@ -27,5 +27,5 @@ export const upload = (src: string, filename: string) => {
       path: `/${filename}`,
     },
     readStream: fs.createReadStream(path.join(rootPath, src, filename)),
-  });
+  }).catch(console.error.bind(console));
 };
